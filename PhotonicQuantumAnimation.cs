@@ -18,7 +18,10 @@ namespace PhotonicQuantumAnimation
         private void CreateAnimation()
         {
             Canvas canvas = new Canvas { Width = 800, Height = 400, Background = Brushes.Black };
-            Content = canvas;
+            
+            // Add canvas to the main grid
+            Grid mainGrid = (Grid)Content;
+            mainGrid.Children.Add(canvas);
 
             // Photonic pulses (light particles)
             for (int i = 0; i < 5; i++)
