@@ -8,5 +8,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="spec-kit\src\specify_cli\__init__.py" />
+    <Content Include="spec-kit\LICENSE" />
+    <Content Include="spec-kit\README.md" />
+    <Content Include="spec-kit\SECURITY.md" />
   </ItemGroup>
 </Project>
