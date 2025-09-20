@@ -1,36 +1,57 @@
-# PQA (Photonic Quantum Animation)
+# Photonic-Quantum
 
-PQA integrates the [spec-kit](https://github.com/xingxerx/spec-kit) toolkit into this workspace, providing advanced specification-driven development tools for your project.
+A modular quantum and photonic simulation/game framework, featuring 3D and 4D (tesseract) visualization, quantum-inspired mechanics, and extensible architecture.
+
+## Project Vision
+
+Photonic-Quantum aims to fuse photonic logic (light interference, diffraction, polarization) with quantum mechanics (superposition, entanglement, probabilistic collapse) in an interactive, visual, and extensible simulation/game environment. The flagship game, Prism Collapse, demonstrates these principles in a 3D/4D world.
 
 ## Features
-- **/specify**: Define and refine requirements and specifications.
-- **/plan**: Generate actionable plans from specifications.
-- **/task**: Manage and track tasks derived from plans.
-- **/constitution**: Set and enforce project rules and guidelines.
-- **/implement**: Guide and automate implementation steps.
 
-## Getting Started
-1. Ensure you have Python 3.8+ installed.
-2. Install dependencies:
-   ```sh
-   pip install -e ./spec-kit
-   ```
-3. Use the CLI commands from the `spec-kit` package:
-   ```sh
-   specify /specify
-   specify /plan
-   specify /task
-   specify /constitution
-   specify /implement
-   ```
+- Quantum and photonic logic (superposition, entanglement, interference)
+- 3D and 4D (tesseract/hypercube) visualization in WPF
+- Modular, extensible C# architecture
+- Animation, movement, collision, and physics systems
+- Game loop and animation engine
 
-## Project Structure
-- `spec-kit/` — Contains the spec-kit source code and CLI.
-- `PhotonicQuantumAnimation.csproj` — Main C# project for quantum animation.
-- `README.md` — This file.
+## Core Implementation
+
+- **Photon, LatticeNode3D, Gates, Wavefunction, CoherenceReservoir, ScoreSystem**: Core quantum and photonic classes (see `Core.cs`)
+- **MovementEngine**: 3D movement and collision logic
+- **PhysicsEngine**: Quantum physics and propagation
+- **AnimationEngine**: Animation system scaffolding
+- **GameLoop**: Game loop logic
+- **MainWindow.xaml/.cs**: WPF UI, 3D/4D tesseract projection and animation
+
+## 4D Visualization
+
+- Implements a tesseract (hypercube) projection and animation in WPF 3D
+- Real-time rotation and rendering of 4D objects
+
+## Build & Run
+
+### Prerequisites
+
+- .NET 9 SDK or later
+- Windows with WPF support
+
+### Quick Start
+
+```sh
+# Run the 3D/4D visualization game
+ dotnet run --project src/PrismCollapse3D/PrismCollapse3D.csproj
+```
+
+## Directory Structure
+
+- `src/PrismCollapse3D/` — Main 3D/4D game and visualization
+  - `Core.cs`, `MovementEngine.cs`, `PhysicsEngine.cs`, `AnimationEngine.cs`, `GameLoop.cs`, `MainWindow.xaml/.cs`
+
+## Troubleshooting
+
+- If you encounter build errors related to `InitializeComponent` or missing fields, ensure your XAML and code-behind namespaces and class names match, and that your project file does not explicitly include .cs/.xaml files (let the SDK handle it).
+- Use `dotnet clean` and `dotnet build` to regenerate auto-generated files if needed.
 
 ## License
-See `spec-kit/LICENSE` for licensing details.
 
----
-For more information, visit the [spec-kit GitHub repository](https://github.com/xingxerx/spec-kit).
+MIT
