@@ -18,3 +18,4 @@ D:\Photonic-Quantum\obj\Debug\net6.0-windows\refint\PhotonicQuantumAnimation.dll
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation.pdb
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation.genruntimeconfig.cache
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\ref\PhotonicQuantumAnimation.dll
+D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation_Content.g.cs
