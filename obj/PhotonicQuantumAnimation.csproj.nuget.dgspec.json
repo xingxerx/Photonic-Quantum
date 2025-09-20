@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj": {}
+    "d:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj": {}
   },
   "projects": {
-    "D:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj": {
+    "d:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj",
+        "projectUniqueName": "d:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj",
         "projectName": "PhotonicQuantumAnimation",
-        "projectPath": "D:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj",
+        "projectPath": "d:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj",
         "packagesPath": "C:\\Users\\there\\.nuget\\packages\\",
-        "outputPath": "D:\\Photonic-Quantum\\obj\\",
+        "outputPath": "d:\\Photonic-Quantum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\there\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -6,7 +6,6 @@ D:\Photonic-Quantum\bin\Debug\net6.0-windows\PhotonicQuantumAnimation.pdb
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\MainWindow.baml
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\App.g.cs
-D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation_Content.g.cs
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation_MarkupCompile.cache
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation.g.resources
 D:\Photonic-Quantum\obj\Debug\net6.0-windows\PhotonicQuantumAnimation.GeneratedMSBuildEditorConfig.editorconfig

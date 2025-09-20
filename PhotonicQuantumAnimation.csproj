@@ -6,7 +6,4 @@
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="PhotonicQuantumAnimation.cs" />
-  </ItemGroup>
 </Project>
