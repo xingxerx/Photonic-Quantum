@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhotonicQuantumAnimation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+933041af9ac86d6895e9440aacb4409a524d1e64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c1c236a963014e0b87a3040828f106357507539")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhotonicQuantumAnimation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhotonicQuantumAnimation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
