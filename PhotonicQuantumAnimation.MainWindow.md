@@ -1,0 +1,6 @@
+<Window x:Class="PhotonicQuantumAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Photonic-Quantum Animation" Height="450" Width="800">
+    <Grid />
+</Window>
