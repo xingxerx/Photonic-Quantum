@@ -18,7 +18,7 @@ namespace PhotonicQuantumAnimation
         private void CreateAnimation()
         {
             Canvas canvas = new Canvas { Width = 800, Height = 400, Background = Brushes.Black };
-            
+
             // Add canvas to the main grid
             Grid mainGrid = (Grid)Content;
             mainGrid.Children.Add(canvas);
