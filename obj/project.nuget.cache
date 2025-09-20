@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XPwYKCR1M8I=",
+  "dgSpecHash": "x5RNJ6QA2/I=",
   "success": true,
-  "projectFilePath": "D:\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj",
+  "projectFilePath": "D:\\Photonic-Quantum\\Photonic-Quantum\\PhotonicQuantumAnimation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\there\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\there\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
