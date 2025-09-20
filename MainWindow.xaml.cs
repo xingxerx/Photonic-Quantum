@@ -51,11 +51,13 @@ namespace PhotonicQuantumAnimation
             // Quantum qubits (spinning shapes)
             for (int i = 0; i < 3; i++)
             {
+                // Create a new SolidColorBrush for each qubit so it can be animated
+                SolidColorBrush qubitBrush = new SolidColorBrush(Colors.Red);
                 Rectangle qubit = new Rectangle
                 {
                     Width = 20,
                     Height = 20,
-                    Fill = Brushes.Red,
+                    Fill = qubitBrush,
                     Opacity = 0.9
                 };
                 Canvas.SetLeft(qubit, 350);
@@ -84,7 +86,7 @@ namespace PhotonicQuantumAnimation
                     AutoReverse = true,
                     RepeatBehavior = RepeatBehavior.Forever
                 };
-                qubit.Fill.BeginAnimation(SolidColorBrush.ColorProperty, color);
+                qubitBrush.BeginAnimation(SolidColorBrush.ColorProperty, color);
             }
         }
     }
