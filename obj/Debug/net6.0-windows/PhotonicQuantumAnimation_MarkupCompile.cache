@@ -4,12 +4,12 @@
 winexe
 C#
 .cs
-D:\Photonic-Quantum\obj\Debug\net6.0-windows\
+D:\Photonic-Quantum\Photonic-Quantum\obj\Debug\net6.0-windows\
 PhotonicQuantumAnimation
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-D:\Photonic-Quantum\App.xaml
+D:\Photonic-Quantum\Photonic-Quantum\App.xaml
 11407045341
 4172823278
 2-1958734538
