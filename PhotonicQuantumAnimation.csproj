@@ -6,4 +6,7 @@
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="spec-kit\src\specify_cli\__init__.py" />
+  </ItemGroup>
 </Project>
