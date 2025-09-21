@@ -1,0 +1,26 @@
+# Task Breakdown: Python QuTiP Photonic Quantum REPL
+
+- **Setup (0.5h):**
+  - Install QuTiP, numpy
+  - Create project structure
+- **Single-Qubit Logic (1h):**
+  - Import QuTiP, initialize |0>
+  - Define gate functions (H, X, Y, Z, S)
+  - Print state amplitudes
+- **REPL Core (1h):**
+  - Build cmd.Cmd subclass
+  - Parse commands: apply, show, help, quit
+- **Multi-Qubit Support (1h):**
+  - Add qubits, tensor products
+  - Bell state creation
+- **Measurement (0.5h):**
+  - Implement measurement/collapse
+  - Print measurement results
+- **Visualization (1h):**
+  - ASCII amplitudes, Bloch sphere
+- **Error Handling & Help (0.5h):**
+  - Add help, error messages
+- **Extendability (1h):**
+  - Add stubs for noise, custom gates
+- **Docs & Polish (0.5h):**
+  - Write README, usage examples

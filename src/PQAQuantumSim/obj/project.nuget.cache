@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "H5uI03TEFQ0=",
+  "success": true,
+  "projectFilePath": "/mnt/d/Photonic-Quantum/src/PQAQuantumSim/PQAQuantumSim.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,29 @@
+# Task Breakdown: Photonic Quantum Animation (PQA)
+
+- **Setup (1h):**
+  - Clone repo, open in Unity Hub (2022.3)
+  - Add spec-kit as Python Tools subdir
+- **Quantum Basics (2h):**
+  - Create Qubit.cs with complex state
+  - Gate base class
+- **Hadamard Gate (3h):**
+  - Animate superposition
+  - Photon splitter visual
+- **Entanglement (4h):**
+  - CNOT animation
+  - Bell state visualization
+- **Photonic Shaders (3h):**
+  - Custom Unity shaders for interference/polarization
+- **Circuit Builder UI (2h):**
+  - Canvas with drag-drop gates
+- **Animation Timeline (2h):**
+  - Play/pause controls, state evolution
+- **Export Module (1h):**
+  - Unity Recorder for GIF/MP4
+- **Spec-Kit Integration (1h):**
+  - Editor script to run specify /implement
+- **Tests (2h):**
+  - Unit tests for gates (NUnit)
+  - Visual regression
+- **Docs (1h):**
+  - Update README with Unity setup, spec examples

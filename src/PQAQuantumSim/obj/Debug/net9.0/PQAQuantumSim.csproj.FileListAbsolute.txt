@@ -1,0 +1,15 @@
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/bin/Debug/net9.0/PQAQuantumSim
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/bin/Debug/net9.0/PQAQuantumSim.deps.json
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/bin/Debug/net9.0/PQAQuantumSim.runtimeconfig.json
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/bin/Debug/net9.0/PQAQuantumSim.dll
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/bin/Debug/net9.0/PQAQuantumSim.pdb
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.AssemblyInfoInputs.cache
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.AssemblyInfo.cs
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.csproj.CoreCompileInputs.cache
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.sourcelink.json
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.dll
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/refint/PQAQuantumSim.dll
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.pdb
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/PQAQuantumSim.genruntimeconfig.cache
+/mnt/d/Photonic-Quantum/src/PQAQuantumSim/obj/Debug/net9.0/ref/PQAQuantumSim.dll
