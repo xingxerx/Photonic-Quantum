@@ -11,5 +11,6 @@
     <Content Include="spec-kit\LICENSE" />
     <Content Include="spec-kit\README.md" />
     <Content Include="spec-kit\SECURITY.md" />
+    <Content Include="QuasarDysonAnimation.cs" />
   </ItemGroup>
 </Project>
