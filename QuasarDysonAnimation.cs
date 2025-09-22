@@ -103,6 +103,7 @@ namespace PrismCollapse3D
             MeshGeometry3D mesh = new MeshGeometry3D();
             Point3DCollection positions = new Point3DCollection();
             Int32Collection indices = new Int32Collection();
+            PointCollection textureCoords = new PointCollection();
 
             for (int stack = 0; stack <= stacks; stack++)
             {
@@ -114,6 +115,9 @@ namespace PrismCollapse3D
                     double y = radius * Math.Sin(phi) * Math.Sin(theta);
                     double z = radius * Math.Cos(phi);
                     positions.Add(new Point3D(x, y, z));
+                    
+                    // Add texture coordinates
+                    textureCoords.Add(new Point((double)slice / slices, (double)stack / stacks));
                 }
             }
 
@@ -126,9 +130,12 @@ namespace PrismCollapse3D
                     int bottom = (stack + 1) * (slices + 1) + slice;
                     int bottomRight = bottom + 1;
 
+                    // First triangle
                     indices.Add(top);
                     indices.Add(bottom);
                     indices.Add(topRight);
+                    
+                    // Second triangle
                     indices.Add(topRight);
                     indices.Add(bottom);
                     indices.Add(bottomRight);
@@ -137,6 +144,7 @@ namespace PrismCollapse3D
 
             mesh.Positions = positions;
             mesh.TriangleIndices = indices;
+            mesh.TextureCoordinates = textureCoords;
             return mesh;
         }
 

@@ -11,7 +11,7 @@ using PrismCollapse3D;
 
 namespace PhotonicQuantumAnimation
 {
-    public partial class MainWindow : Window
+    public class MainWindow : Window
     {
         private QuasarDysonAnimation? quasarAnimation;
         private DispatcherTimer? animationTimer;
@@ -19,7 +19,12 @@ namespace PhotonicQuantumAnimation
 
         public MainWindow()
         {
-            InitializeComponent();
+            // Manually set up the window since InitializeComponent isn't working
+            this.Title = "Photonic Quantum Animation - Quasar Dyson Sphere";
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
+            this.Background = Brushes.Black;
+            this.Content = new Grid();
             
             // Add key handler to exit fullscreen with Escape
             this.KeyDown += MainWindow_KeyDown;
