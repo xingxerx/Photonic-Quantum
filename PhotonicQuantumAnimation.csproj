@@ -12,5 +12,6 @@
     <Content Include="spec-kit\README.md" />
     <Content Include="spec-kit\SECURITY.md" />
     <Content Include="QuasarDysonAnimation.cs" />
+    <Content Include="MainWindow.xaml.cs" />
   </ItemGroup>
 </Project>

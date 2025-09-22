@@ -1,7 +1,10 @@
 <Window x:Class="PhotonicQuantumAnimation.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Photonic Quantum Animation" Height="450" Width="850">
+        Title="Photonic Quantum Animation - Quasar Dyson Sphere" 
+        WindowState="Maximized" 
+        WindowStyle="None"
+        Background="Black">
     <Grid>
         
     </Grid>

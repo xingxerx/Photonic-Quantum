@@ -22,6 +22,12 @@ namespace PrismCollapse3D
 
         private void InitializeScene()
         {
+            // Ambient light for better visibility
+            AmbientLight ambientLight = new AmbientLight
+            {
+                Color = Color.FromRgb(30, 30, 30)
+            };
+
             // Quasar: Central point light for intense emission
             PointLight quasarLight = new PointLight
             {
@@ -32,41 +38,61 @@ namespace PrismCollapse3D
                 LinearAttenuation = 0.01
             };
 
-            // Dyson Sphere: Simplified wireframe sphere
+            // Additional directional light for better visibility
+            DirectionalLight directionalLight = new DirectionalLight
+            {
+                Color = Color.FromRgb(100, 100, 150),
+                Direction = new Vector3D(-1, -1, -1)
+            };
+
+            // Dyson Sphere: More visible with emission material
             MeshGeometry3D sphereMesh = CreateSphereMesh(5, 20, 20);
             GeometryModel3D dysonSphere = new GeometryModel3D
             {
                 Geometry = sphereMesh,
-                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(50, 255, 255, 255)))
+                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(100, 0, 255, 255))),
+                BackMaterial = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(50, 255, 255, 255)))
             };
 
-            // Jets: Two conical jets along Z-axis
+            // Jets: Brighter and more visible
             MeshGeometry3D jetMesh1 = CreateConeMesh(0.5, 10, 10, new Vector3D(0, 0, 1));
             MeshGeometry3D jetMesh2 = CreateConeMesh(0.5, 10, 10, new Vector3D(0, 0, -1));
             GeometryModel3D jet1 = new GeometryModel3D
             {
                 Geometry = jetMesh1,
-                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(100, 255, 165, 0)))
+                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(200, 255, 100, 0)))
             };
             GeometryModel3D jet2 = new GeometryModel3D
             {
                 Geometry = jetMesh2,
-                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(100, 255, 165, 0)))
+                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(200, 255, 100, 0)))
             };
 
+            // Central core - visible quasar representation
+            MeshGeometry3D coreMesh = CreateSphereMesh(0.5, 10, 10);
+            GeometryModel3D quasarCore = new GeometryModel3D
+            {
+                Geometry = coreMesh,
+                Material = new DiffuseMaterial(new SolidColorBrush(Colors.White))
+            };
+
+            scene.Children.Add(ambientLight);
             scene.Children.Add(quasarLight);
+            scene.Children.Add(directionalLight);
             scene.Children.Add(dysonSphere);
             scene.Children.Add(jet1);
             scene.Children.Add(jet2);
+            scene.Children.Add(quasarCore);
 
             ModelVisual3D modelVisual = new ModelVisual3D { Content = scene };
             viewport.Children.Add(modelVisual);
 
-            // Camera setup
+            // Camera setup - better positioning
             PerspectiveCamera camera = new PerspectiveCamera
             {
-                Position = new Point3D(0, 0, 20),
+                Position = new Point3D(0, 0, 15),
                 LookDirection = new Vector3D(0, 0, -1),
+                UpDirection = new Vector3D(0, 1, 0),
                 FieldOfView = 60
             };
             viewport.Camera = camera;
@@ -160,14 +186,23 @@ namespace PrismCollapse3D
         public void Update(double deltaTime)
         {
             time += deltaTime;
-            // Rotate Dyson sphere
-            RotateTransform3D rotation = new RotateTransform3D(
+            
+            // Rotate Dyson sphere (index 3 - after ambient, point, directional lights)
+            RotateTransform3D sphereRotation = new RotateTransform3D(
                 new AxisAngleRotation3D(new Vector3D(0, 1, 0), time * 30));
-            scene.Children[1].Transform = rotation; // Dyson sphere
-            // Pulse jets
-            double pulse = Math.Sin(time * 2) * 0.2 + 1;
-            scene.Children[2].Transform = new ScaleTransform3D(1, 1, pulse); // Jet1
-            scene.Children[3].Transform = new ScaleTransform3D(1, 1, pulse); // Jet2
+            scene.Children[3].Transform = sphereRotation; // Dyson sphere
+            
+            // Pulse jets (indices 4 and 5)
+            double pulse = Math.Sin(time * 2) * 0.3 + 1;
+            ScaleTransform3D jetScale1 = new ScaleTransform3D(1, 1, pulse);
+            ScaleTransform3D jetScale2 = new ScaleTransform3D(1, 1, pulse);
+            scene.Children[4].Transform = jetScale1; // Jet1
+            scene.Children[5].Transform = jetScale2; // Jet2
+            
+            // Pulsate quasar core (index 6)
+            double corePulse = Math.Sin(time * 4) * 0.2 + 1;
+            ScaleTransform3D coreScale = new ScaleTransform3D(corePulse, corePulse, corePulse);
+            scene.Children[6].Transform = coreScale; // Quasar core
         }
     }
 }

@@ -11,5 +11,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("spec-kit/license")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("spec-kit/readme.md")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("spec-kit/security.md")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("quasardysonanimation.cs")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mainwindow.xaml.cs")]
 
 

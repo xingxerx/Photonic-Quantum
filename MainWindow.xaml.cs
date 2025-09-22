@@ -3,25 +3,84 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using PrismCollapse3D;
 
 namespace PhotonicQuantumAnimation
 {
     public partial class MainWindow : Window
     {
+        private QuasarDysonAnimation? quasarAnimation;
+        private DispatcherTimer? animationTimer;
+        private DateTime lastUpdate;
+
         public MainWindow()
         {
             InitializeComponent();
+            
+            // Add key handler to exit fullscreen with Escape
+            this.KeyDown += MainWindow_KeyDown;
+            
             CreateAnimation();
+        }
+
+        private void MainWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
+            }
         }
 
         private void CreateAnimation()
         {
-            Canvas canvas = new Canvas { Width = 800, Height = 400, Background = Brushes.Black };
-
-            // Add canvas to the main grid
+            // Create main grid with two sections
             Grid mainGrid = (Grid)Content;
-            mainGrid.Children.Add(canvas);
+            
+            // Create a dock panel to organize layout - now full screen
+            DockPanel dockPanel = new DockPanel();
+            mainGrid.Children.Add(dockPanel);
+            
+            // Create 3D Quasar animation section - takes up most of the screen
+            Create3DQuasarAnimation(dockPanel);
+            
+            // Create 2D photonic animation section - smaller sidebar
+            Create2DPhotonicAnimation(dockPanel);
+            
+            // Start animation timer
+            lastUpdate = DateTime.Now;
+            animationTimer = new DispatcherTimer();
+            animationTimer.Interval = TimeSpan.FromMilliseconds(16); // ~60 FPS
+            animationTimer.Tick += AnimationTimer_Tick;
+            animationTimer.Start();
+        }
+
+        private void Create3DQuasarAnimation(DockPanel parent)
+        {
+            // Create a border to provide background for 3D viewport - much larger now
+            Border border = new Border
+            {
+                Background = Brushes.Black
+            };
+            
+            // Create 3D viewport for Quasar animation - fills most of screen
+            Viewport3D viewport3D = new Viewport3D();
+            
+            border.Child = viewport3D;
+            DockPanel.SetDock(border, Dock.Left);
+            parent.Children.Add(border);
+            
+            // Initialize Quasar-Dyson animation
+            quasarAnimation = new QuasarDysonAnimation(viewport3D);
+        }
+
+        private void Create2DPhotonicAnimation(DockPanel parent)
+        {
+            Canvas canvas = new Canvas { Width = 300, Background = Brushes.Black };
+            DockPanel.SetDock(canvas, Dock.Right);
+            parent.Children.Add(canvas);
 
             // Photonic pulses (light particles)
             for (int i = 0; i < 5; i++)
@@ -88,6 +147,16 @@ namespace PhotonicQuantumAnimation
                 };
                 qubitBrush.BeginAnimation(SolidColorBrush.ColorProperty, color);
             }
+        }
+
+        private void AnimationTimer_Tick(object? sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            double deltaTime = (now - lastUpdate).TotalSeconds;
+            lastUpdate = now;
+            
+            // Update 3D Quasar animation
+            quasarAnimation?.Update(deltaTime);
         }
     }
 }
