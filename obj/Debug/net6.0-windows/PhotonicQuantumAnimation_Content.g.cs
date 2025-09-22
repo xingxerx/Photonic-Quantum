@@ -13,5 +13,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("spec-kit/security.md")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("quasardysonanimation.cs")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mainwindow.xaml.cs")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mainwindow.xaml")]
 
 
