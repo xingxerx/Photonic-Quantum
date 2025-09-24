@@ -46,30 +46,30 @@ namespace PrismCollapse3D
             };
 
             // Dyson Sphere: More visible with emission material
-            MeshGeometry3D sphereMesh = CreateSphereMesh(5, 20, 20);
+            MeshGeometry3D sphereMesh = CreateSphereMesh(8, 24, 24);
             GeometryModel3D dysonSphere = new GeometryModel3D
             {
                 Geometry = sphereMesh,
-                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(100, 0, 255, 255))),
-                BackMaterial = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(50, 255, 255, 255)))
+                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(150, 0, 255, 255))),
+                BackMaterial = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(100, 255, 255, 255)))
             };
 
             // Jets: Brighter and more visible
-            MeshGeometry3D jetMesh1 = CreateConeMesh(0.5, 10, 10, new Vector3D(0, 0, 1));
-            MeshGeometry3D jetMesh2 = CreateConeMesh(0.5, 10, 10, new Vector3D(0, 0, -1));
+            MeshGeometry3D jetMesh1 = CreateConeMesh(1.0, 15, 12, new Vector3D(0, 0, 1));
+            MeshGeometry3D jetMesh2 = CreateConeMesh(1.0, 15, 12, new Vector3D(0, 0, -1));
             GeometryModel3D jet1 = new GeometryModel3D
             {
                 Geometry = jetMesh1,
-                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(200, 255, 100, 0)))
+                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(255, 255, 100, 0)))
             };
             GeometryModel3D jet2 = new GeometryModel3D
             {
                 Geometry = jetMesh2,
-                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(200, 255, 100, 0)))
+                Material = new DiffuseMaterial(new SolidColorBrush(Color.FromArgb(255, 255, 100, 0)))
             };
 
             // Central core - visible quasar representation
-            MeshGeometry3D coreMesh = CreateSphereMesh(0.5, 10, 10);
+            MeshGeometry3D coreMesh = CreateSphereMesh(1.5, 12, 12);
             GeometryModel3D quasarCore = new GeometryModel3D
             {
                 Geometry = coreMesh,
@@ -87,13 +87,13 @@ namespace PrismCollapse3D
             ModelVisual3D modelVisual = new ModelVisual3D { Content = scene };
             viewport.Children.Add(modelVisual);
 
-            // Camera setup - better positioning
+            // Camera setup - better positioning for windowed mode
             PerspectiveCamera camera = new PerspectiveCamera
             {
-                Position = new Point3D(0, 0, 15),
+                Position = new Point3D(0, 0, 25),
                 LookDirection = new Vector3D(0, 0, -1),
                 UpDirection = new Vector3D(0, 1, 0),
-                FieldOfView = 60
+                FieldOfView = 45
             };
             viewport.Camera = camera;
         }
